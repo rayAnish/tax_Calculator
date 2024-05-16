@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <div class="center">
+    <button id="show-main">TAX CALCULATOR</button>
+  </div>
+
+  <div class="content" id="content">
+    <i class="bi bi-x-square-fill" id="close"></i>
+    <div class="inner_content">
+      <div class="form">
+        <h1 class="text-center" style="font-weight: bold;">Tax Calculator</h1>
+        <form id="taxForm">
+          <div class="form-element" id="grossIncomeError">
+            <label for="grossIncome"> Enter Gross Annual Income:</label>
+            <input type="number" id="grossIncome" placeholder="gross annual income">
+            <i id="error-icon" class="bi bi-exclamation-circle"> <span id="msg">Gross Annual <br>Income is Your Total <br>Salary in a Year <br> Before any Deduction</span></i>
+          </div>
+          <div class="form-element" id="extraIncomeError">
+            <label for="extraIncome">Enter Extra Income :</label>
+            <input type="number" id="extraIncome" placeholder="enter extra income">
+            <i id="error-icon" class="bi bi-exclamation-circle"><span id="msg">Please Enter <br> Numbers Only</span></i>
+          </div>
+          <div class="form-element" id="ageError">
+            <label for="age">Enter Age:</label>
+            <input type="number" id="age" placeholder="enter age">
+            <i id="error-icon" class="bi bi-exclamation-circle"><span id="msg">Enter Your <br> Valid Age</i>
+          </div>
+          <div class="form-element" id="deductionsError">
+            <label for="deductions">Enter Total Deductions</label>
+            <input type="number" id="deductions" placeholder="total exempted costs">
+            <i id="error-icon" class="bi bi-exclamation-circle"><span id="msg">Total Allowable <br> Expense Pool</span></i>
+          </div>
+          <div class="form-element text-center">
+            <button id="evaluate" type="submit" onclick="respond">Calculate Tax</button>
+            <button id="refresh" type="submit"  onclick="refreshPage()">Refresh</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+  <div class="res-pop" id="res-pop">
+    <p>Your over all income will be</p>
+    <h6>after tax deductions</h6>
+    <div id="result"></div>
+    <button id="back" type="button" onclick="responss">OK</button>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <script src="script.js"></script>
+</body>
+</html>
